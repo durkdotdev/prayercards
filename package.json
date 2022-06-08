@@ -1,5 +1,5 @@
 {
-  "name": "prayercard",
+  "name": "prayercards",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
@@ -10,10 +10,12 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx}\" && yarn eslint ./ --fix"
   },
   "devDependencies": {
     "eslint-config-custom": "latest",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "prettier": "latest",
     "turbo": "latest"
   },
